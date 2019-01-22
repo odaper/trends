@@ -1,0 +1,38 @@
+{
+  "name": "trends",
+  "version": "0.0.1",
+  "description": "CSS library using the preprocessor SASS which offers different types of natural, organic shapes, material effect, animations to use in a modern web application. We follow the trends of the web design 2019",
+  "main": "index.js",
+  "scripts": {
+    "lint": "stylelint --syntax scss \"**/*.scss\"",
+    "precommit": "npm-run-all --sequential lint build",
+    "build": "npm-run-all --sequential minify*",
+    "minify": "cleancss --level 1 --source-map --source-map-inline-sources --output dist/trends.min.css dist/trends.css",
+    "compile": "node-sass --output-style expanded --source-map true --source-map-contents true --precision 6 trends.scss dist/trends.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/odaper/trends.git"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "shapes",
+    "modern",
+    "design",
+    "material",
+    "animation"
+  ],
+  "author": "Khaled Mathlouthi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/odaper/trends/issues"
+  },
+  "homepage": "https://github.com/odaper/trends#readme",
+  "devDependencies": {
+    "clean-css-cli": "^4.2.1",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "stylelint": "^9.10.1"
+  }
+}
